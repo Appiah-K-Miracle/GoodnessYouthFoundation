@@ -43,18 +43,23 @@ CSS INDEX
 33. Team Details Page
 34. Pricing Page
 
+colors:
+#086a97
+#efdd0d
+#246604
+#fe0000
 */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Quicksand:wght@300..700&amp;display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&amp;display=swap");
 :root {
   --black: #000;
   --white: #fff;
-  --ul-primary: #EB5310;
-  --ul-secondary: #FAA019;
+  --ul-primary: #086a97;
+  --ul-secondary:#086a97;
   --ul-c3: #FFE9C8;
   --ul-c4: #FFF9F4;
-  --ul-c5: #FC791A;
-  --ul-black: #1E252F;
+  --ul-c5: #086a97;
+  --ul-black: #111b2c;
   --ul-p: #434343;
   --ul-gray: #434343;
   --ul-gray2: #D2D2D1;
@@ -217,7 +222,7 @@ button {
   }
 }
 .logo {
-  max-width: clamp(130px, 11.56vw, 220px);
+  max-width: clamp(30px, 11.56vw, 80px);
 }
 
 .ul-bs-row {
@@ -1427,7 +1432,7 @@ button {
 }
 .ul-header-2 .ul-header-nav a:hover,
 .ul-header-2 .ul-header-nav a:not([href]):not([class]):hover {
-  color: var(--ul-primary);
+  color: var(ul-header);
 }
 
 .ul-sidebar.active .ul-header-nav {
@@ -1678,7 +1683,7 @@ button {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(101.64deg, rgba(235, 83, 16, 0.9) 1.87%, rgba(235, 83, 16, 0.1) 98.72%);
+  background: linear-gradient(101.64deg, rgba(8, 108, 151, 0.9) 1.87%, rgba(10, 141, 202, 0.1) 98.72%);
   pointer-events: none;
 }
 .ul-banner-2-slide-bg-img {
