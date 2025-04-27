@@ -58,7 +58,7 @@ colors:
   --ul-secondary:#086a97;
   --ul-c3: #FFE9C8;
   --ul-c4: #FFF9F4;
-  --ul-c5: #086a97;
+  --ul-c5: #efdd0d;
   --ul-black: #111b2c;
   --ul-p: #434343;
   --ul-gray: #434343;
@@ -906,6 +906,7 @@ button {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: clamp(20px, 1.58vw, 30px);
 }
@@ -1683,7 +1684,7 @@ button {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(101.64deg, rgba(8, 108, 151, 0.9) 1.87%, rgba(10, 141, 202, 0.1) 98.72%);
+  background: linear-gradient(101.64deg, rgba(8, 108, 151, 0.9) 1.87%, rgba(1, 24, 34, 0.288) 98.72%);
   pointer-events: none;
 }
 .ul-banner-2-slide-bg-img {
@@ -2510,7 +2511,8 @@ button {
   transition: 0.4s ease;
 }
 .ul-team-member:hover {
-  background-color: var(--ul-primary);
+  background-color: var(--ul-gray2);
+  /* color: var(--ul-primary); */
 }
 .ul-team-member:hover .ul-team-member-img::before {
   opacity: 1;
@@ -2522,7 +2524,7 @@ button {
 }
 .ul-team-member:hover .ul-team-member-name a,
 .ul-team-member:hover .ul-team-member-designation {
-  color: var(--white);
+  color: var(--black);
 }
 .ul-team-member-img {
   position: relative;
@@ -3535,7 +3537,7 @@ button {
   background: url(../img/volunteer-bg-1.jpg) no-repeat center center/cover;
   position: relative;
   z-index: 1;
-  padding: clamp(25px, 2.1vw, 40px) clamp(15px, 8.41vw, 160px);
+  padding: clamp(5px, 2.1vw, 4px) clamp(5px, 4.41vw, 150px);
   color: var(--white);
   height: 100%;
 }
@@ -3873,6 +3875,8 @@ button {
 
 .ul-about-tabs-nav {
   display: flex;
+  /* align-items: center; */
+  justify-content: center;
   margin-top: clamp(44px, 4.41vw, 84px);
   gap: 15px 0;
 }
@@ -3883,6 +3887,7 @@ button {
 }
 .ul-about-tabs-nav button {
   color: var(--white);
+  max-width: clamp(300px, 20vw, 300px);
   padding: 0;
   flex-grow: 1;
   text-align: center;
@@ -3890,11 +3895,13 @@ button {
   font-weight: 900;
   font-family: var(--font-quicksand);
   padding-bottom: clamp(12px, 1.68vw, 32px);
-  border-bottom: 1px solid var(--white);
+  border-bottom: 5px solid var(--white);
 }
 @media screen and (max-width: 575px) {
   .ul-about-tabs-nav button {
     padding-inline: 10px;
+    max-width: clamp(100px, 20vw, 100px);
+    font-size: 14px;
   }
 }
 .ul-about-tabs-nav button.active {
@@ -3956,7 +3963,7 @@ button {
   object-fit: cover;
 }
 .ul-about-tab-txt > * {
-  margin-bottom: clamp(13px, 0.84vw, 16px);
+  margin-bottom: clamp(20px, 0.84vw, 16px);
 }
 .ul-about-tab-txt > *:last-child {
   margin-bottom: 0;
@@ -5035,3 +5042,103 @@ button {
   background-color: var(--ul-primary);
   color: var(--white);
 }/*# sourceMappingURL=style.css.map */
+
+
+
+.donation-container {
+  position: relative;
+  width: 100%;
+  justify-content:space-evenly;
+  align-items: center;
+  /* max-width: 800px; */
+  margin: 50px auto;
+  /* height: 150px; */
+  overflow: hidden;
+  /* background: #f9f9f9; */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.info-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  gap: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s ease;
+  opacity: 0;
+  z-index: 0;
+}
+
+.show-fade {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hide-fade {
+  opacity: 0;
+  z-index: 0;
+}
+
+.ul-donate-form-label {
+  margin: 5px 0;
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+.resize{
+  font-size: 18px;
+}
+@media screen and (max-width: 767px) {
+  .logo {
+    max-width: clamp(30px, 8.56vw, 60px);
+  }
+  .ul-donate-form-label {
+    font-size: 15px;
+  }
+  .resize{
+    font-size: 15px;
+  }
+  .info-block {
+    flex-direction: column;
+  }
+  .donation-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     height: 130px;
+     margin-top: -10px;
+  }
+  .donation-container .info-block {
+    width: 100%;
+    height: auto;
+  }
+ 
+  .footer-logo-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* border: 1px solid var(--ul-gray3); */
+     
+    max-width: 100%;
+  }
+  
+  .ul-footer-about-txt {
+    font-size: clamp(11px, 9.1vw, 3px);
+    color: var(--ul-gray2);
+  }
+  .ul-footer-about {
+    max-width: 100%;
+  }
+  
+  .hidenitems {
+    display: none;
+  }
+}
