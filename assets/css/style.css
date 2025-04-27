@@ -900,14 +900,14 @@ button {
 .ul-sidebar {
   justify-content: flex-start;
   gap: 20px;
-  border-left: 2px solid var(--ul-primary);
+  /* border-left: 2px solid var(--ul-primary); */
 }
 .ul-sidebar-header {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
   padding-bottom: clamp(20px, 1.58vw, 30px);
 }
 .ul-sidebar-closer {
@@ -1063,7 +1063,7 @@ button {
 @media screen and (max-width: 991px) {
   .ul-header-nav {
     flex-direction: column;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    /* border: 1px solid rgba(0, 0, 0, 0.2); */
     gap: 0;
     display: none;
   }
